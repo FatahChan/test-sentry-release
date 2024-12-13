@@ -26,7 +26,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Click on the Vite and React logos to learn more, Test2
       </p>
        <button onClick={() => {throw new Error("This is your first error!");}}>Break the world</button>
     </>
