@@ -6,7 +6,14 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react(), sentryVitePlugin({
     org: "fatahchan",
-    project: "test-sentry-release"
+    project: "test-sentry-release",
+    release: {
+      name: `${process.env.VITE_RELEASE_NAME}`,
+      deploy: {
+        env: `${process.env.GITHUB_ENVIRONMENT || 'local'}`
+      }
+    }
+  
   })],
 
   build: {
