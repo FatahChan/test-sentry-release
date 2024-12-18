@@ -11,6 +11,9 @@ export default defineConfig({
       name: `${process.env.VITE_RELEASE_NAME}`,
       deploy: {
         env: `${process.env.GITHUB_ENVIRONMENT || 'local'}`
+      },
+      setCommits: {
+        auto: true,
       }
     }
   
