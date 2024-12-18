@@ -37,7 +37,7 @@ jobs:
 
       - name: 'Create Sentry env file'
         run: |
-          echo "SENTRY_AUTH_TOKEN=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" > .env.sentry-build-plugin
+          echo "SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}" > .env.sentry-build-plugin
       - name: 'Install dependencies'
         run: pnpm install
       - name: 'Build'
